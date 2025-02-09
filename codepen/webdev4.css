@@ -7,12 +7,12 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #000;
+	background: #e5acac;
 }
 
 .content {
-	width: 90vmin;
-	height: 90vmin;
+	width: 125vmin;
+	height: 85vmin;
 	/*background: rgb(252, 239, 239);*/
 	display: flex;
 	flex-wrap: wrap;
