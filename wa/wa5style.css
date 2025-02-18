@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('football.jpeg'); /* Background Image */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+#main-container {
+    position: relative; /* Relative positioning to place the overlay elements on top */
+    height: 100%;
+}
+
+/* Overlay Element 1: Team A Overlay */
+#team-a-overlay {
+    position: absolute; /* Position on top of the main container */
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/* Overlay Element 2: Team B Overlay */
+#team-b-overlay {
+    position: absolute; /* Position on top of the main container */
+    top: 20px;
+    right: 20px; /* Position to the right */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/* Styling for team names and score */
+.team-name {
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.team-score {
+    margin: 0 5px;
+}
+
+
+/* Overlay Element 2: Info Box or Button */
+#info-overlay {
+    position: absolute; /* Position on top of the main container */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Button Styling */
+#info-overlay button {
+    background-color: #eebae0;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#info-overlay button:hover {
+    background-color: #d84e68;
+}
