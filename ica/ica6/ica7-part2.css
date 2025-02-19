@@ -10,22 +10,26 @@ body{
     padding:5vw;
 }
 
-#flex-child1{
-     
+.flex-container{
+    display:flex;
 }
-#flex-child2{
- 
+    #flex-child1{
+    order: flex; 
 }
-#flex-child3{
- 
+    #flex-child2{
+    order: 4;
 }
-#flex-child4{
- 
+    #flex-child3{
+    order: 2;
+}
+    #flex-child4{
+        order: 1;
 }
 
 
 #grid-parent{
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 #grid-parent h1{
@@ -35,32 +39,52 @@ body{
     
 }
 #no0{
-    
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no1{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no2{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no3{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no4{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no5{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no6{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no7{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no8{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
 #no9{
-
+    background-color: lightblue;
+    padding: 2vh;
+    border: 1px solid black;
 }
