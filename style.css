@@ -1,0 +1,105 @@
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f8d4e8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.top-right-image {
+    position: absolute;
+    top: 100px; /* Adjust the distance from the top of the header */
+    left: 10px; /* Adjust the distance from the right edge */
+    height: 50px; /* Adjust the image height */
+    width: auto; /* Maintain the aspect ratio of the image */
+
+}
+/* Header styles */
+header {
+    background-color: #a7d383; /* Green background */
+    padding: 2px 0;
+    border-bottom: 2px solid #9ec87c; /* Border at the bottom of the header */
+}
+
+/* Navigation Menu */
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    border: 1px solid #9ec87c; /* Border around each menu item */
+    border-radius: 5px; /* Rounded corners for the menu items */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block; /* Make the link block-level to fill the li element */
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background-color: #75bd78; /* Darker green on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #75bd78; /* Green background for dropdown */
+    min-width: 160px; /* Width of the dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1;
+    border: 1px solid #9ec87c; /* Border around the dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #82a465; /* Border between dropdown links */
+}
+
+.dropdown-content a:hover {
+    background-color: #6cb06f; /* Darker green on hover for dropdown items */
+}
+
+/* Show the dropdown menu when hovering over the dropdown link */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Responsive Design: Center navigation for smaller screens */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
