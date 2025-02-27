@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightpink;
+    color: rgb(5, 62, 17);
+    font-family: fantasy;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(230, 158, 170);
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(5, 62, 17);
+}
+
+
+img{
+    width:70vw;
+    height: 70vh;
+    transition: transform .7s ease-in-out;
+}
+
+img:hover{
+    transform: rotate(720deg);
+}
+
+#red-ball{
+    background-color: rgb(230, 74, 139);
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:5vw;
+    transition: transform 4s ease;
+}
+#red-ball:hover{
+    animation: red-ball 4s forwards;
+}
+
+@keyframes red-ball{
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(90vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
