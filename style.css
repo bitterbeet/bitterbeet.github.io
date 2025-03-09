@@ -82,6 +82,42 @@ header nav ul li a:hover {
     display: block;
 }
 
+.footer-content {
+    display: flex;  /* Align child elements in a row */
+    justify-content: space-between; /* Space out the items */
+    align-items: center;  /* Vertically align the items */
+    padding: 20px;
+  }
+  
+  .stay-connected,
+  .footer-nav {
+    flex: 1;  /* Allow each section to take equal width */
+  }
+  
+  .stay-connected {
+    margin-right: 20px;  /* Optional: Add some space between sections */
+  }
+  
+  .footer-nav ul {
+    list-style: none;  /* Remove default list styling */
+    padding: 0;
+  }
+  
+  .footer-nav ul li {
+    display: inline;  /* Align list items horizontally */
+    margin-right: 10px;  /* Add space between links */
+  }
+  
+  .footer-nav ul li a {
+    text-decoration: none;  /* Remove underline from links */
+    color: #000;  /* Set text color */
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #007BFF;  /* Change color on hover */
+  }
+  
+
 /* Main content styles */
 main {
     padding: 20px;

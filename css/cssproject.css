@@ -1,0 +1,219 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3D3A4B;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  
+  h1, h2 {
+    text-align: center;
+    font-family: monospace;
+    color: #ffffff;
+    margin: 20px 0;
+  }
+  
+  h1 {
+    font-size: 2.8em;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+  }
+  
+  p {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #3D3A4B;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav:hover {
+    background-color: #282631;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 25px;
+    position: relative;
+  }
+  
+  nav ul li a {
+    color: #E3DFFF;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #fff;
+    
+  }
+  
+  /* Dropdown Menu Styles */
+  nav ul li:hover .dropdown-content {
+    display: block;
+  }
+  
+  nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #E3DFFF;
+    min-width: 1px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+  }
+  
+  nav .dropdown-content a {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav .dropdown-content a:hover {
+    background-color: #E3DFFF;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  section.concert {
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  /* Footer */
+  footer {
+    background-color: #3D3A4B;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  /* Add this to your cssproject.css file */
+.footer-content {
+    display: flex;  /* Align child elements in a row */
+    justify-content: space-between; /* Space out the items */
+    align-items: center;  /* Vertically align the items */
+    padding: 20px;
+  }
+  
+  .stay-connected,
+  .footer-nav {
+    flex: 1;  /* Allow each section to take equal width */
+  }
+  
+  .stay-connected {
+    margin-right: 20px;  /* Optional: Add some space between sections */
+  }
+  
+  .footer-nav ul {
+    list-style: none;  /* Remove default list styling */
+    padding: 0;
+  }
+  
+  .footer-nav ul li {
+    display: grid;  /* Align list items horizontally */
+    margin-right: 10px; 
+    margin-bottom: 10px; /* Add space between links */
+  }
+  
+  .footer-nav ul li a {
+    text-decoration: none;  /* Remove underline from links */
+    color: #E3DFFF;  /* Set text color */
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #ffffff;  /* Change color on hover */
+  }
+  
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.2em;
+    }
+  
+    h2 {
+      font-size: 1.6em;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    section.concert {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    nav .dropdown-content {
+      position: relative;
+      min-width: 100%;
+    }
+  
+    nav ul li:hover .dropdown-content {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1500px) {
+    body {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 3.5em;
+    }
+  
+    h2 {
+      font-size: 2.2em;
+    }
+  
+    section.concert {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    footer {
+      font-size: 1.2em;
+    }
+  }
+  
