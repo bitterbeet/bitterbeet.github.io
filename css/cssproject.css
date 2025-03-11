@@ -28,7 +28,7 @@ body {
     margin-bottom: 10px;
   }
   
-  /* Navigation Bar */
+
   nav {
     background-color: #3D3A4B;
     padding: 15px 0;
@@ -55,7 +55,7 @@ body {
   nav ul li a {
     color: #E3DFFF;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: .9em;
     font-weight: bold;
     transition: color 0.3s ease;
   }
@@ -65,7 +65,6 @@ body {
     
   }
   
-  /* Dropdown Menu Styles */
   nav ul li:hover .dropdown-content {
     display: block;
   }
@@ -96,7 +95,7 @@ body {
     background-color: #E3DFFF;
   }
   
-  /* Main Content */
+
   main {
     padding: 20px;
     background-color: #f7f7f7;
@@ -113,7 +112,7 @@ body {
   
   
   
-  /* Footer */
+
   footer {
     background-color: #3D3A4B;
     color: white;
@@ -122,45 +121,44 @@ body {
     font-size: 1em;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   }
-  /* Add this to your cssproject.css file */
+  
 .footer-content {
-    display: flex;  /* Align child elements in a row */
-    justify-content: space-between; /* Space out the items */
-    align-items: center;  /* Vertically align the items */
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center;  
     padding: 20px;
   }
   
   .stay-connected,
   .footer-nav {
-    flex: 1;  /* Allow each section to take equal width */
-  }
+    flex: 1;  
   
   .stay-connected {
-    margin-right: 20px;  /* Optional: Add some space between sections */
+    margin-right: 20px;  
   }
   
   .footer-nav ul {
-    list-style: none;  /* Remove default list styling */
+    list-style: none;  
     padding: 0;
   }
   
   .footer-nav ul li {
-    display: grid;  /* Align list items horizontally */
+    display: grid; 
     margin-right: 10px; 
-    margin-bottom: 10px; /* Add space between links */
+    margin-bottom: 10px; 
   }
   
   .footer-nav ul li a {
-    text-decoration: none;  /* Remove underline from links */
-    color: #E3DFFF;  /* Set text color */
+    text-decoration: none;  
+    color: #E3DFFF; 
   }
   
   .footer-nav ul li a:hover {
-    color: #ffffff;  /* Change color on hover */
+    color: #ffffff;  
   }
   
   
-  /* Media Queries for Responsiveness */
+  
   @media (max-width: 768px) {
     h1 {
       font-size: 2.2em;
