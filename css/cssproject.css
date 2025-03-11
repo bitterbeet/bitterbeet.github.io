@@ -5,6 +5,7 @@ body {
     background-color: #3D3A4B;
     color: #333;
     line-height: 1.6;
+
   }
 
   
@@ -20,12 +21,14 @@ body {
   }
   
   h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
   
   p {
     font-size: 1em;
     margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   
 
@@ -73,7 +76,7 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    background-color: #E3DFFF;
+    background-color: #3D3A4B;
     min-width: 1px;
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -87,18 +90,18 @@ body {
     text-decoration: none;
     padding: 8px 16px;
     display: block;
-    font-size: 1.1em;
+    font-size: 1.em;
     transition: background-color 0.3s ease;
   }
   
   nav .dropdown-content a:hover {
-    background-color: #E3DFFF;
+    background-color: #282631;
   }
   
 
   main {
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #3D3A4B;
   }
   
   section.concert {
@@ -106,7 +109,7 @@ body {
     margin-bottom: 20px;
     margin-top: 10px;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
   
