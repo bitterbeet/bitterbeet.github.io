@@ -1,219 +1,215 @@
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #3D3A4B;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Alata';
+  margin: 0;
+  padding: 30px;
+  background-color: #435c7a;
+  color: #333;
+  line-height: 1.6;
+}
 
-  }
+h1, h2 {
+  text-align: center;
+  color: #ffffff;
+  margin: 20px 0;
+}
 
-  
-  h1, h2 {
-    text-align: center;
-    font-family: monospace;
-    color: #ffffff;
-    margin: 20px 0;
-  }
-  
-  h1 {
-    font-size: 2.8em;
-  }
-  
-  h2 {
-    font-size: 1.6em;
-  }
-  
-  p {
-    font-size: 1em;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  
+h1 {
+  font-size: 2.8em;
+}
 
-  nav {
-    background-color: #3D3A4B;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav:hover {
-    background-color: #282631;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 0 25px;
-    position: relative;
-  }
-  
-  nav ul li a {
-    color: #E3DFFF;
-    text-decoration: none;
-    font-size: .9em;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #fff;
-    
-  }
-  
-  nav ul li:hover .dropdown-content {
-    display: block;
-  }
-  
-  nav .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: #3D3A4B;
-    min-width: 1px;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    z-index: 1;
-  }
-  
-  nav .dropdown-content a {
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 16px;
-    display: block;
-    font-size: 1.em;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav .dropdown-content a:hover {
-    background-color: #282631;
-  }
-  
+h2 {
+  font-size: 1.5em;
+  font-family: "Open Sans";
+}
 
-  main {
-    padding: 20px;
-    background-color: #3D3A4B;
-  }
-  
-  section.concert {
-    background-color: #fff;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding: 20px;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  
+p {
+  font-family: 'Open Sans';
+  font-size: 1em;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-  footer {
-    background-color: #3D3A4B;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 1em;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #435c7a;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav:hover {
+  background-color: #3a4f6a;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 25px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #a0c5a7;
+  text-decoration: none;
+  font-size: .9em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li:hover .dropdown-content {
+  display: block;
+}
+
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #435c7a;
+  min-width: 1px;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+nav .dropdown-content a {
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: block;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+nav .dropdown-content a:hover {
+  background-color: #3a4f6a;
+}
+
+main {
+  padding: 30px;
+  background-color: #435c7a;
+}
+
+section.concert {
+  background-color: #a0c5a7;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-image: url('prettylights.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1em;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .footer-content {
-    display: flex;  
-    justify-content: space-between; 
-    align-items: center;  
-    padding: 20px;
-  }
-  
-  .stay-connected,
-  .footer-nav {
-    flex: 1;  
-  
-  .stay-connected {
-    margin-right: 20px;  
-  }
-  
-  .footer-nav ul {
-    list-style: none;  
-    padding: 0;
-  }
-  
-  .footer-nav ul li {
-    display: grid; 
-    margin-right: 10px; 
-    margin-bottom: 10px; 
-  }
-  
-  .footer-nav ul li a {
-    text-decoration: none;  
-    color: #E3DFFF; 
-  }
-  
-  .footer-nav ul li a:hover {
-    color: #ffffff;  
-  }
-  
-  
-  
-  @media (max-width: 768px) {
-    h1 {
+  display: flex;  
+  justify-content: space-between; 
+  align-items: center;  
+  padding: 20px;
+}
+
+.stay-connected,
+.footer-nav {
+  flex: 1;
+}
+
+.stay-connected {
+  margin-right: 20px;
+}
+
+.footer-nav ul {
+  list-style: none;  
+  padding: 0;
+}
+
+.footer-nav ul li {
+  display: grid; 
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+}
+
+.footer-nav ul li a {
+  text-decoration: none;  
+  color: #a0c5a7; 
+}
+
+.footer-nav ul li a:hover {
+  color: #ffffff;  
+}
+
+@media (max-width: 768px) {
+  h1 {
       font-size: 2.2em;
-    }
-  
-    h2 {
+  }
+
+  h2 {
       font-size: 1.6em;
-    }
-  
-    nav ul {
+  }
+
+  nav ul {
       flex-direction: column;
       align-items: center;
-    }
-  
-    nav ul li {
+  }
+
+  nav ul li {
       margin: 10px 0;
-    }
-  
-    section.concert {
+  }
+
+  section.concert {
       padding: 15px;
       width: 100%;
-    }
-  
-    nav .dropdown-content {
+  }
+
+  nav .dropdown-content {
       position: relative;
       min-width: 100%;
-    }
-  
-    nav ul li:hover .dropdown-content {
-      display: block;
-    }
   }
-  
-  @media (min-width: 1500px) {
-    body {
+
+  nav ul li:hover .dropdown-content {
+      display: block;
+  }
+}
+
+@media (min-width: 1500px) {
+  body {
       padding: 20px;
-    }
-  
-    h1 {
+  }
+
+  h1 {
       font-size: 3.5em;
-    }
-  
-    h2 {
+  }
+
+  h2 {
       font-size: 2.2em;
-    }
-  
-    section.concert {
+  }
+
+  section.concert {
       width: 80%;
       margin: 0 auto;
-    }
-  
-    footer {
-      font-size: 1.2em;
-    }
   }
+
+  footer {
+      font-size: 1.2em;
+  }
+}

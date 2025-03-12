@@ -83,6 +83,7 @@ header nav ul li a:hover {
 }
 
 .footer-content {
+    color: white;
     display: flex;  /* Align child elements in a row */
     justify-content: space-between; /* Space out the items */
     align-items: center;  /* Vertically align the items */
@@ -114,7 +115,7 @@ header nav ul li a:hover {
   }
   
   .footer-nav ul li a:hover {
-    color: #007BFF;  /* Change color on hover */
+    color: #a0c5a7;  /* Change color on hover */
   }
   
 
