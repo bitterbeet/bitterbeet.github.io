@@ -68,9 +68,9 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #a0c5a7;
+  color: #bae4c2;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.95em;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -99,7 +99,7 @@ nav .dropdown-content a {
   text-decoration: none;
   padding: 8px 16px;
   display: block;
-  font-size: 0.9em;
+  font-size: 0.95em;
   transition: background-color 0.3s ease;
 }
 
@@ -171,7 +171,6 @@ footer {
 }
 
 .footer-nav ul li a {
-  background-color: ;
   text-decoration: none;  
   color: #a0c5a7; 
 }
