@@ -202,10 +202,9 @@ footer {
 
   section.concert {
     align-items: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 15px;
     width: 100%; 
+    max-width: 400px;
+    margin: 20px auto;
   }
 
   nav .dropdown-content {
@@ -239,7 +238,7 @@ footer {
   }
 
   .footer-nav ul li a {
-    color: #a0c5a7;
+    color: #3e6861;
     text-align: center;
   }
 }
