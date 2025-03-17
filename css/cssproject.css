@@ -181,40 +181,6 @@ footer {
   color: #ffffff;  
 }
 
-@media (max-width: 768px) {
-  h1 {
-      font-size: 2.2em;
-  }
-
-  h2 {
-      font-size: 1.6em;
-  }
-
-  nav ul {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  nav ul li {
-      margin: 10px 0;
-  }
-
-  section.concert {
-      padding: 15px;
-      width: 100%;
-  }
-
-  nav .dropdown-content {
-      position: relative;
-      min-width: 100%;
-  }
-  
-
-  nav ul li:hover .dropdown-content {
-      display: block;
-  }
-}
-
 @media (min-width: 1500px) {
   body {
       padding: 20px;
