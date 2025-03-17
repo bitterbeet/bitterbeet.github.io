@@ -104,8 +104,7 @@ nav .dropdown-content a {
 }
 
 nav .dropdown-content a:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* Adds overlay on hover */
-}
+  background-color: rgba(0, 0, 0, 0.5); 
 
 nav ul li:hover .dropdown-content {
   display: block;
@@ -229,5 +228,6 @@ footer {
   section.concert {
       width: 80%;
       margin: 0 auto;
+   }
   }
 }
