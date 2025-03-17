@@ -180,6 +180,66 @@ footer {
 .footer-nav ul li a:hover {
   color: #ffffff;  
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  nav ul {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  section.concert {
+    padding: 15px;
+    width: 100%; 
+  }
+
+  nav .dropdown-content {
+    position: relative;
+    min-width: 100%;
+  }
+
+  nav ul li:hover .dropdown-content {
+    display: block;
+  }
+
+  
+  main, section.concert {
+    max-width: 400px;  
+    margin: 0 auto;  
+  }
+
+  footer .footer-content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav ul li {
+    margin: 10px 0;
+  }
+
+  .footer-nav ul li a {
+    color: #a0c5a7;
+    text-align: center;
+  }
+}
 
 @media (min-width: 1500px) {
   body {
