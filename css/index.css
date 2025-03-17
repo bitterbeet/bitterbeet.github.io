@@ -201,6 +201,9 @@ footer {
   }
 
   section.concert {
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding: 15px;
     width: 100%; 
   }
