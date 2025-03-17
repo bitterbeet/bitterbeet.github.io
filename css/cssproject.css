@@ -38,6 +38,7 @@ p {
   margin-right: 10px;
 }
 
+
 nav {
   background-image: url('bluelights.jpg');
   background-size: cover;
@@ -48,6 +49,7 @@ nav {
   padding: 15px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  width: 100%;
 }
 
 nav:hover {
@@ -90,7 +92,7 @@ nav .dropdown-content {
   padding: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  z-index: 1;
+  z-index: 1010;
 }
 
 nav .dropdown-content a {
@@ -105,6 +107,7 @@ nav .dropdown-content a {
 
 nav .dropdown-content a:hover {
   background-color: rgba(0, 0, 0, 0.5); 
+}
 
 nav ul li:hover .dropdown-content {
   display: block;
@@ -230,4 +233,3 @@ footer {
       margin: 0 auto;
    }
   }
-}
