@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            color: azure;
+            background-color: rgb(206, 101, 174);
+        }
+
+        button {
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: aliceblue;
+            background-color: rgb(179, 55, 35);
+            border-radius: 5px;
+        }
+
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: (206, 101, 174);
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: rgb(179, 55, 35);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="name">Hello World?</h1>
+    <button>I'm a button</button>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+        console.log('hello world');
+
+        let btn = document.querySelector("button");
+        btn.addEventListener('click', () => {
+            updateName();
+            myMove(); 
+        });
+
+        function updateName() {
+            let name = document.querySelector('.name');
+            const input = prompt('Enter a new title');
+            if (input) { 
+                name.textContent = input; 
+            } else {
+                name.textContent = 'No name entered'; 
+            }
+        }
+
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
