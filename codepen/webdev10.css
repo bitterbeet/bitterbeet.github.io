@@ -6,20 +6,27 @@
 @property --＠color-1 {
     syntax: "<color>";
     inherits: false;
-    initial-value: #fe8e06;
+    initial-value: #cb3119;
   }
   
   @property --＠color-2 {
     syntax: "<color>";
     inherits: false;
-    initial-value: #b64c2f;
+    initial-value: #e5a721;
+  }
+
+  @property --＠color-3 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ace91f;
   }
   
   /* keyframes that change the color variable */
   @keyframes gradient-change {
     to {
-      --＠color-1: #b64c2f;
-      --＠color-2: #fcb933;
+      --＠color-1: #43b62f;
+      --＠color-2: #3369fc;
+      --＠color-3: #7c1ea8;
     }
   }
   
@@ -35,7 +42,8 @@
       to right in oklch, 
       /* use the variables in a gradient (or wherever!) */
       var(--＠color-1), 
-      var(--＠color-2)
+      var(--＠color-2),
+      var(--＠color-3)
     );
     
     /* old browser support */
