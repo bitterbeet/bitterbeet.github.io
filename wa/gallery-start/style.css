@@ -1,6 +1,7 @@
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  color: aliceblue;
 }
 
 body {
@@ -33,14 +34,16 @@ body {
 }
 
 button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: aliceblue;
   border: 0;
   background: rgba(150,150,150,0.6);
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 1px 1px 1px rgb(60, 60, 60);
   border: 1px solid #999;
   position: absolute;
   cursor: pointer;
   top: 2px;
-  left: 2px;
+  left: 22px;
 }
 .thumb-bar {
   display: flex;
