@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sticker Text</title>
+  <link rel="stylesheet" href="webdev13.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="text" contenteditable="true" spellcheck="false">
+      Edit this text
+    </div>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+    <defs>
+      <filter id="sticker">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="1" seed="14" result="turb1"/>
+        <feColorMatrix in="turb1" type="saturate" values="30" result="colormatrix1"/>
+        <feMorphology in="SourceGraphic" operator="dilate" radius="10" result="morph1"/>
+        <feFlood flood-color="#000000" flood-opacity="1" result="flood1"/>
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur1"/>
+        <feOffset in="colormatrix1" dx="0" dy="0" result="offset1"/>
+        <feComposite in="flood1" in2="morph1" operator="in" result="comp1"/>
+        <feDiffuseLighting in="blur1" surfaceScale="10" lighting-color="#ffffff" result="light1">
+          <fePointLight x="100" y="50" z="20"/>
+        </feDiffuseLighting>
+        <feComposite in="offset1" in2="SourceGraphic" operator="atop" result="comp2"/>
+        <feComposite in="comp2" in2="comp1" operator="atop" result="comp3"/>
+        <feTurbulence type="fractalNoise" baseFrequency="3" numOctaves="1" seed="0" result="turb2"/>
+        <feComposite in="light1" in2="comp3" operator="in" result="comp4"/>
+        <feBlend in="comp4" in2="comp3" mode="color-dodge" result="blend1"/>
+        <feColorMatrix in="turb2" type="matrix" 
+          values="1 0 0 0 0 
+                  1 0 0 0 0 
+                  1 0 0 0 0 
+                  0.03 0 0 0 0" result="colormatrix2"/>
+        <feComposite in="colormatrix2" in2="blend1" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+  <script src="webdev13.js"></script>
+</body>
+</html>
