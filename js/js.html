@@ -2,18 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Enter Your Phone Number</title>
+  <title>Bad Phone Input</title>
   <link rel="stylesheet" href="js.css">
 </head>
 <body>
+    <!--Human Test-->
+    <div id="human-check-modal" class="modal">
+        <div class="modal-content">
+          <p id="modal-question"></p>
+          <input type="text" id="user-input" placeholder="Your answer" />
+          <button id="submit-answer">Submit</button>
+          <button id="close-modal">Close</button>
+        </div>
+      <!--Wrong Answer-->
+        </div>
+        <div id="wrong-answer-modal" class="modal">
+            <div class="modal-content">
+             <span id="close-wrong-modal" class="close-btn">&times;</span>
+             <p id="wrong-answer-message">Wrong! Try again!</p>
+             <button id="retry-button">Retry</button>
+         </div>
+         </div>
 
-<h1>Enter Phone Number</h1>
-<div class="container" id="inputs">
-  <!-- Inputs inserted by JS -->
-</div>
-
-<button class="submit-button" onmouseover="moveButton()">Submit</button>
-
-<script src="js.js"></script>
+  <h1>Enter Your Phone Number</h1>
+  <div class="container" id="inputs"></div>
+  <button class="submit-button" onclick="submitPhone()">Submit</button>
+  <script src="js.js"></script>
 </body>
 </html>
