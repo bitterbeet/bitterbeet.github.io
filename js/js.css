@@ -1,174 +1,160 @@
-/* Body Styles */
 body {
-    background: #6693ac;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-  }
-  
-  /* Header */
-  h1 {
-    color: #000000;
-  }
-  
-  /* Blink Animation for effects (if needed) */
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-  
-  /* Container for Phone Number Inputs */
-  .container {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  /* Input Fields (Phone number digits) */
-  input {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 24px;
-    border: 2px solid #000;
-  }
-  
-  /* Submit Button */
-  .submit-button {
-    margin-top: 30px;
-    padding: 10px 20px;
-    background: #405e6e;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #3b5365;
-  }
-  
-  /* Extension Container (if used) */
-  .extension-container {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    gap: 10px;
-  }
-  
-  #extension {
-    display: flex;
-    gap: 5px;
-  }
-  
-  #extension input {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 20px;
-    border: 2px solid #000;
-  }
-  
-  /* Modal Background */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 60px; /* Add some top spacing */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: white;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    position: relative;
-    border-radius: 10px; /* Rounded corners */
-  }
-  
-  /* Close Button (X) inside the Modal */
-  .close-btn {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-  }
-  
-  .close-btn:hover,
-  .close-btn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* Wrong Answer Modal Text */
-  #wrong-answer-message {
-    font-size: 18px;
-    color: red;
-    font-weight: bold;
-    margin-bottom: 20px; /* Space between message and button */
-  }
-  
-  /* Retry Button */
-  #retry-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  
-  #retry-button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Human Check Modal Styles */
-  #user-input {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px;
-  }
-  
-  button {
-    padding: 10px 15px;
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
-    background-color: #1e307e;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px; /* Rounded corners */
-  }
-  
-  button:hover {
-    background-color: #172565;
-  }
-  
-  #close-modal {
-    background-color: #f44336;
-  }
-  
-  #close-modal:hover {
-    background-color: #e53935;
-  }
-  
+  background: #6693ac;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+h1 {
+  color: #000000;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid #000;
+}
+
+.submit-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: #405e6e;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #3b5365;
+}
+
+.extension-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#extension {
+  display: flex;
+  gap: 5px;
+}
+
+#extension input {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid #000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#wrong-answer-message {
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#retry-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#retry-button:hover {
+  background-color: #45a049;
+}
+
+#user-input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #1e307e;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #172565;
+}
+
+#close-modal {
+  background-color: #f44336;
+}
+
+#close-modal:hover {
+  background-color: #e53935;
+}
