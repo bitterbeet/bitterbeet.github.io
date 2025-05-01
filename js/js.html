@@ -6,42 +6,54 @@
   <link rel="stylesheet" href="js.css">
 </head>
 <body>
-    <div id="human-check-modal" class="modal">
-        <div class="modal-content">
-          <p id="modal-question"></p>
-          <input type="text" id="user-input" placeholder="Your answer">
-          <button id="submit-answer">Submit</button>
-          <button id="close-modal">Close</button>
-        </div>
-      </div>
-      <div id="wrong-answer-modal" class="modal">
-        <div class="modal-content">
-          <span id="close-wrong-modal" class="close-btn">&times;</span>
-          <p id="wrong-answer-message">Wrong! Try again!</p>
-          <button id="retry-button">Retry</button>
-        </div>
-      </div>
-      <div id="success-modal" class="modal">
-        <div class="modal-content">
-          <span id="close-success-modal" class="close-btn">&times;</span>
-          <p id="success-message">Wow, you guessed it!</p>
-          <p id="entered-phone-number"></p>
-          <button id="success-retry-button">Retry</button>
-        </div>
-      </div>
-      <div id="info-modal" class="modal">
-        <div class="modal-content">
-          <span id="close-info-modal" class="close-btn">&times;</span>
-          <p id="info-message">That's all the digits!</p>
-          <button id="info-ok-button">OK</button>
-        </div>
-      </div>
+  
+  <div id="human-check-modal" class="modal">
+    <div class="modal-content">
+      <p id="modal-question"></p>
+      <input type="text" id="user-input" placeholder="Your answer">
+      <button id="submit-answer">Submit</button>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
+
+  <div id="wrong-answer-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-wrong-modal" class="close-btn">&times;</span>
+      <p id="wrong-answer-message">Wrong! Try again!</p>
+      <button id="retry-button">Retry</button>
+    </div>
+  </div>
+
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-success-modal" class="close-btn">&times;</span>
+      <p id="success-message">Wow, you guessed it!</p>
+      <p id="entered-phone-number"></p>
+      <button id="success-retry-button">Retry</button>
+    </div>
+  </div>
+
+  <div id="info-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-info-modal" class="close-btn">&times;</span>
+      <p id="info-message">That's all the digits!</p>
+      <button id="info-ok-button">OK</button>
+    </div>
+  </div>
+
+  <div id="general-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeGeneralModal()">&times;</span>
+      <p id="general-modal-message"></p>
+    </div>
+  </div>
 
   <h1>Enter Your Phone Number</h1>
   <div class="container" id="inputs"></div>
-  <button onclick="revealNextDigit()">Show One Digit</button>
+  <button onclick="revealNextDigit()">Show Random Digit</button>
+  <button class="clear-button" onclick="clearOneDigit()">Clear Random Digit</button>
   <button class="submit-button" onclick="submitPhone()">Submit</button>
-  <button class="clear-button" onclick="clearOneDigit()">Clear One Digit</button>
+
   <script src="js.js"></script>
 </body>
 </html>
