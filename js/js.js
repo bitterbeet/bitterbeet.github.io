@@ -1,19 +1,26 @@
 const container = document.getElementById('inputs');
 const totalDigits = 10;
+let revealedIndex = 0;
 
+// Generate phone input fields with dashes
 for (let i = 0; i < totalDigits; i++) {
   const input = document.createElement('input');
   input.maxLength = 1;
   input.type = 'password';
+  input.autocomplete = 'off';
 
+  const index = i;
   input.addEventListener('input', (e) => {
     const value = e.target.value;
+    if (value === '') return;
+
     if (/^\d$/.test(value)) {
-      const nextInput = document.querySelectorAll('#inputs input')[i + 1];
+      const inputs = document.querySelectorAll('#inputs input');
+      const nextInput = inputs[index + 1];
       if (nextInput) nextInput.focus();
     } else {
       clearRandomInputs();
-      alert("Wrong key! We cleared 3 digits for you.");
+      alert("Wrong key! We cleared 3 digits for you."); // Optional: remove this if you'd prefer a modal
     }
   });
 
@@ -28,42 +35,49 @@ for (let i = 0; i < totalDigits; i++) {
   }
 }
 
+// Helper functions
 function clearRandomInputs() {
   const inputs = Array.from(document.querySelectorAll('#inputs input'));
-  const filledInputs = inputs.filter(input => input.value !== '');
-  const toClear = filledInputs.sort(() => 0.5 - Math.random()).slice(0, Math.min(3, filledInputs.length));
+  const filled = inputs.filter(input => input.value !== '');
+  const toClear = filled.sort(() => 0.5 - Math.random()).slice(0, Math.min(3, filled.length));
   toClear.forEach(input => input.value = '');
 }
 
 function clearOneDigit() {
   const inputs = Array.from(document.querySelectorAll('#inputs input'));
-  const filledInputs = inputs.filter(input => input.value !== '');
-  if (filledInputs.length === 0) return;
-  const randomInput = filledInputs[Math.floor(Math.random() * filledInputs.length)];
+  const filled = inputs.filter(input => input.value !== '');
+  if (filled.length === 0) return;
+  const randomInput = filled[Math.floor(Math.random() * filled.length)];
   randomInput.value = '';
 }
 
 function clearInputs() {
   document.querySelectorAll('#inputs input').forEach(input => input.value = '');
+  resetReveal();
 }
 
-function closeModal() {
-  modal.style.display = 'none';
-  userInput.value = '';
+function resetReveal() {
+  revealedIndex = 0;
 }
 
-function showWrongAnswerModal() {
-  wrongAnswerModal.style.display = 'block';
+// Reveal digits one at a time
+function revealNextDigit() {
+  const inputs = document.querySelectorAll('#inputs input');
+  if (revealedIndex >= inputs.length) {
+    infoMessage.textContent = "That's all the digits!";
+    infoModal.style.display = 'block';
+    return;
+  }
+  const input = inputs[revealedIndex];
+  const originalType = input.type;
+  input.type = 'text';
+  setTimeout(() => {
+    input.type = originalType;
+    revealedIndex++;
+  }, 1000);
 }
 
-function closeWrongAnswerModal() {
-  wrongAnswerModal.style.display = 'none';
-}
-
-function closeSuccessModal() {
-  successModal.style.display = 'none';
-}
-
+// Modal Elements
 const modal = document.getElementById('human-check-modal');
 const modalQuestion = document.getElementById('modal-question');
 const userInput = document.getElementById('user-input');
@@ -80,6 +94,12 @@ const wrongAnswerModal = document.getElementById('wrong-answer-modal');
 const closeWrongModalButton = document.getElementById('close-wrong-modal');
 const retryButton = document.getElementById('retry-button');
 
+const infoModal = document.getElementById('info-modal');
+const closeInfoModalButton = document.getElementById('close-info-modal');
+const infoOkButton = document.getElementById('info-ok-button');
+const infoMessage = document.getElementById('info-message');
+
+// Modal event listeners
 closeModalButton.addEventListener('click', closeModal);
 closeSuccessModalButton.addEventListener('click', closeSuccessModal);
 successRetryButton.addEventListener('click', () => {
@@ -90,12 +110,17 @@ successRetryButton.addEventListener('click', () => {
 closeWrongModalButton.addEventListener('click', closeWrongAnswerModal);
 retryButton.addEventListener('click', closeWrongAnswerModal);
 
+closeInfoModalButton.addEventListener('click', closeInfoModal);
+infoOkButton.addEventListener('click', closeInfoModal);
+
 window.addEventListener('click', function (event) {
   if (event.target === successModal) closeSuccessModal();
   if (event.target === wrongAnswerModal) closeWrongAnswerModal();
   if (event.target === modal) closeModal();
+  if (event.target === infoModal) closeInfoModal();
 });
 
+// Phone submission + challenge logic
 function submitPhone() {
   const inputs = document.querySelectorAll('#inputs input');
   const phoneNumber = Array.from(inputs).map(input => input.value).join('');
@@ -132,23 +157,23 @@ function showSuccessModal(phoneNumber) {
   successModal.style.display = 'block';
 }
 
-let revealedIndex = 0;
-
-function revealNextDigit() {
-  const inputs = document.querySelectorAll('#inputs input');
-  if (revealedIndex >= inputs.length) {
-    alert("That's all the digits!");
-    return;
-  }
-  const input = inputs[revealedIndex];
-  const originalType = input.type;
-  input.type = 'text';
-  setTimeout(() => {
-    input.type = originalType;
-    revealedIndex++;
-  }, 1000);
+function closeModal() {
+  modal.style.display = 'none';
+  userInput.value = '';
 }
 
-function resetReveal() {
-  revealedIndex = 0;
+function showWrongAnswerModal() {
+  wrongAnswerModal.style.display = 'block';
+}
+
+function closeWrongAnswerModal() {
+  wrongAnswerModal.style.display = 'none';
+}
+
+function closeSuccessModal() {
+  successModal.style.display = 'none';
+}
+
+function closeInfoModal() {
+  infoModal.style.display = 'none';
 }
